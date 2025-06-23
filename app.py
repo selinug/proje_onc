@@ -47,7 +47,7 @@ if st.session_state.step == 1:
         st.rerun()
 
 elif st.session_state.step == 2:
-    st.subheader("Kriterlerinizin türünü Fayda/Maliyet olarak belirtiniz. (Fayda=Artması tercih edilen olumlu etkiye sahip kriterler, Maliyet=Azalması tercih edilen olumsuz etkiye sahip kriterler)")
+    st.subheader("Kriterlerinizin türünü Fayda/Maliyet olarak belirtiniz. (Fayda=Artması tercih edilen kriterler, Maliyet=Azalması tercih edilen kriterler)")
     st.session_state.criteria_types = {}
     for crit in st.session_state.criteria_names:
         choice = st.selectbox(f"{crit} kriteri", ["Fayda", "Maliyet"], key=f"type_{crit}")
@@ -57,7 +57,7 @@ elif st.session_state.step == 2:
         st.rerun()
 
 elif st.session_state.step == 3:
-    st.subheader("Her bir kriterin karar üzerindeki etkisini düşünerek, en önemli olandan en az önemli olana doğru bir sıralama yapınız. Bu sıralama, hangi kriterin öncelikli değerlendirileceğini belirlemek için kullanılacaktır.")
+    st.subheader("Her bir kriterin karar üzerindeki etkisini düşünerek, en önemli olandan en az önemli olana doğru bir sıralama yapınız. Bu sıralama, hangi kriterin öncelikli değerlendirileceğini belirlemek için kullanılacaktır.)")
 
     if "selected_criteria" not in st.session_state:
         st.session_state.selected_criteria = []
